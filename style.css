@@ -1,1 +1,443 @@
+```css
+/* =========================================
+   COFFEE GEN Z
+   TEMA HITAM + MERAH ELEGAN
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #0b0b0b;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* =========================================
+   JUDUL UTAMA
+========================================= */
+
+body > p:first-child {
+    text-align: center;
+    padding: 45px 20px 30px;
+    background: linear-gradient(135deg, #090909, #1a0000);
+}
+
+body > p:first-child h1 {
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #ffffff;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+body > p:first-child h1::first-letter {
+    color: #e50914;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(229, 9, 20, 0.35);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    min-height: 75px;
+    padding: 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* LOGO */
+
+.logo {
+    font-size: 23px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+
+.logo span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #e50914;
+    margin-top: -3px;
+}
+
+/* MENU */
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+}
+
+.navbar ul li a {
+    position: relative;
+    text-decoration: none;
+    color: #dddddd;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 14px;
+    transition: 0.3s ease;
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    width: 0;
+    height: 2px;
+    background: #e50914;
+    transform: translateX(-50%);
+    transition: 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #ffffff;
+}
+
+.navbar ul li a:hover::after {
+    width: 70%;
+}
+
+/* CART */
+
+.cart {
+    background: #e50914;
+    padding: 9px 15px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(229, 9, 20, 0.35);
+}
+
+/* =========================================
+   PRODUK SECTION
+========================================= */
+
+.produk-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 80px 25px;
+}
+
+/* JUDUL SECTION */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title p {
+    color: #e50914;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 5px;
+}
+
+.section-title h2 {
+    font-size: 38px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+}
+
+.section-title span {
+    color: #999999;
+    font-size: 15px;
+}
+
+/* =========================================
+   GRID PRODUK
+========================================= */
+
+.produk-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* =========================================
+   CARD PRODUK
+========================================= */
+
+.produk {
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        145deg,
+        #171717,
+        #0e0e0e
+    );
+
+    border: 1px solid #292929;
+    border-radius: 18px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+    transition:
+        transform 0.35s ease,
+        border-color 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.produk:hover {
+    transform: translateY(-8px);
+    border-color: #e50914;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.7),
+        0 0 25px rgba(229, 9, 20, 0.18);
+}
+
+/* GARIS MERAH DI ATAS CARD */
+
+.produk::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 3px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #e50914,
+        transparent
+    );
+}
+
+/* =========================================
+   GAMBAR PRODUK
+========================================= */
+
+.produk img {
+    display: block;
+    width: 100%;
+    height: 230px;
+
+    object-fit: cover;
+
+    background: linear-gradient(
+        135deg,
+        #1a1a1a,
+        #250000
+    );
+
+    transition: transform 0.5s ease;
+}
+
+.produk:hover img {
+    transform: scale(1.05);
+}
+
+/* =========================================
+   INFORMASI PRODUK
+========================================= */
+
+.produk-info {
+    padding: 22px;
+}
+
+.produk-info h3 {
+    font-size: 21px;
+    text-transform: capitalize;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+/* =========================================
+   HARGA + BUTTON
+========================================= */
+
+.produk-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.produk-bottom strong {
+    font-size: 19px;
+    color: #ff2633;
+}
+
+/* BUTTON PESAN */
+
+.produk-bottom button {
+    border: none;
+    outline: none;
+
+    background: #e50914;
+    color: #ffffff;
+
+    padding: 10px 17px;
+    border-radius: 8px;
+
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        transform 0.2s ease,
+        box-shadow 0.3s ease;
+}
+
+.produk-bottom button:hover {
+    background: #ff1a25;
+    transform: scale(1.05);
+
+    box-shadow:
+        0 5px 20px rgba(229, 9, 20, 0.4);
+}
+
+.produk-bottom button:active {
+    transform: scale(0.95);
+}
+
+/* =========================================
+   DESKRIPSI
+========================================= */
+
+body > p:nth-of-type(2) {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 25px 10px;
+}
+
+body > p:nth-of-type(2) h3 {
+    color: #e50914;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+body > p:nth-of-type(3) {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 25px 70px;
+}
+
+body > p:nth-of-type(3) p {
+    color: #aaaaaa;
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #080808;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #e50914;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff1a25;
+}
+
+/* =========================================
+   RESPONSIVE TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+    .produk-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .navbar ul {
+        gap: 3px;
+    }
+
+    .navbar ul li a {
+        padding: 8px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE HP
+========================================= */
+
+@media (max-width: 650px) {
+
+    body > p:first-child h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
+    }
+
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 15px;
+    }
+
+    .navbar ul {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .produk-section {
+        padding: 55px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .produk-container {
+        grid-template-columns: 1fr;
+    }
+
+    .produk img {
+        height: 220px;
+    }
+
+    .produk-bottom button {
+        padding: 9px 13px;
+    }
+}
+```
 

@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coffee shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <p>
+        <h1>coffee gen z</h1>
+    </p>
 
+    <header>
+        <nav class="navbar">
+        <div class="logo"> coffee<span>di jamin murah</span></div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#produk">Produk</a></li>
+            <li><a href="#pelanggan">Data Pelanggan</a></li>
+            <li><a href="#nota">Nota</a></li>
+        </ul>
+
+        <div class="cart">
+            🛒 <span id="cartCount">0</span>
+        </div>
+    </nav>
+    </header>
+
+<!--RODUK -->
+<section class="produk-section" id="produk">
+
+    <div class="section-title">
+        <p>menu coffee gen z</p>
+        <h2>Produk coffee</h2>
+        <span>Pilih menu yang kamu suka dan pesan.</span>
+    </div>
+
+    <div class="produk-container">
+
+        <div class="produk">
+            <img src="c:\Users\HP PROBOOK 635 G7\Downloads\pngtree-iced-americano-with-a-garnish-image_16950850.jpg">
+
+            <div class="produk-info">
+                <h3>americano</h3>
+
+                <div class="produk-bottom">
+                    <strong>Rp35.000</strong>
+                    <button onclick="tambahPesanan('americano', 35000)">
+                        + pesan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="produk">
+            <img src="c:\Users\HP PROBOOK 635 G7\Downloads\caremel latte.jpg">
+
+            <div class="produk-info">
+                <h3>caramel latte</h3>
+
+                <div class="produk-bottom">
+                    <strong>Rp25.000</strong>
+                    <button onclick="tambahPesanan('caramel latte', 25000)">
+                        + pesan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="produk">
+            <img src="c:\Users\HP PROBOOK 635 G7\Downloads\matcha latte.webp">
+
+            <div class="produk-info">
+                <h3>matcha latte</h3>
+
+                <div class="produk-bottom">
+                    <strong>Rp50.000</strong>
+                    <button onclick="tambahPesanan('matcha latte', 50000)">
+                        + pesan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="produk">
+            <img src="c:\Users\HP PROBOOK 635 G7\Downloads\cappucino.avif">
+
+            <div class="produk-info">
+                <h3>cappucino</h3>
+
+                <div class="produk-bottom">
+                    <strong>Rp25.000</strong>
+                    <button onclick="tambahPesanan('cappucino', 25000)">
+                        + pesan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="produk">
+            <img src="c:\Users\HP PROBOOK 635 G7\Downloads\lychee tea.webp">
+
+            <div class="produk-info">
+                <h3>lychee tea</h3>
+
+                <div class="produk-bottom">
+                    <strong>Rp15.000</strong>
+                    <button onclick="tambahPesanan('lychee', 15000)">
+                        + pesan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="produk">
+            <img src="c:\Users\HP PROBOOK 635 G7\Downloads\kopi-gula-aren-terbaik-yang-cocok-untuk-temani-aktivitas-sehari-hari.avif">
+
+            <div class="produk-info">
+                <h3>gula aren</h3>
+
+                <div class="produk-bottom">
+                    <strong>Rp20.000</strong>
+                    <button onclick="tambahPesanan('gula areen', 20000)">
+                        + pesan
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<p>
+    <h3>deskripsi singkat</h3>
+</p>
+
+<p>
+    <p>kopi di tempat kami enakn dan murah kami buka dan tutup jam 10.00 pagi - 12.00 malam <br>
+    kami menyediakan berbagai macam minuman yang sangat enak untuk mengobrol dengan teman <br>
+    kami juga menyediakan wifi gratis untuk yag tidak punya paket data </p>
+</p>
